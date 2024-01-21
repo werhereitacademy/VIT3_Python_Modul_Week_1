@@ -9,9 +9,9 @@
 - Soru 4 : Kullanıcıdan bir sayı alın ve bu sayının tek mi çift mi olduğunu ekrana yazdıran bir Python kodu yazınız.
 
 - Soru 5 : Kullanıcıdan pozitif bir tam sayı girişi alın ve faktöriyelini hesaplayan bir Python programı yazın. Faktöriyel, bir sayının kendisi ile 1 arasındaki tüm pozitif tam sayıların çarpımıdır. 
-Örneğin, kullanıcı 5 girdiyse program şu çıktıyı vermeli:
-Kullanıcıdan bir sayı girin: 5 
-Faktöriyel: 120
+* Örneğin, kullanıcı 5 girdiyse program şu çıktıyı vermeli:
+* Kullanıcıdan bir sayı girin: 5 
+* Faktöriyel: 120
 
 - Soru 6 : Kullanıcıdan bir sayı alan ve bu sayının asal olup olmadığını kontrol eden bir Python kodu yazınız.
 
