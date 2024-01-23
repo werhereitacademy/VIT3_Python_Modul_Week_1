@@ -1,12 +1,12 @@
 
-print('1) Cevap:\n_________')
+print('1) Answer:\n_________')
 
 for i in range(10):
     print(i + 1)
 
-print('\n2) Cevap:\n_________')
+print('\n2) Answer:\n_________')
 
-number = int(input('Choose a number!'))
+number = int(input('Enter a number!'))
 
 print('2.1) \'for loop\' solution:\n')
 
@@ -22,10 +22,10 @@ while i <= number:
         print(i)
     i += 1
 
-print('\n3) Cevap:\n_________')
+print('\n3) Answer:\n_________')
 
 i = int(input('Input a starting value(Integer please!): '))
-end_val = int(input('Input an ending value: '))
+end_val = int(input('Input an ending value(Integer please!): '))
 print(f'Numbers between {i} - {end_val} are: ')
 if i < end_val:
     while i <= end_val:
@@ -36,9 +36,9 @@ elif i > end_val:
         print(i)
         i -= 1
 else:
-    print('Both starting and ending values are same and it is ', i)
+    print('The starting and ending values are the same and are ', i)
 
-print('\n4) Cevap:\n_________')
+print('\n4) Answer:\n_________')
 
 x = int(input('Write a number: '))
 if x%2 != 0:
@@ -46,7 +46,7 @@ if x%2 != 0:
 else:
     print('The number you wrote is even.')
 
-print('\n5) Cevap:\n_________')
+print('\n5) Answer:\n_________')
 
 x = int(input('Write a positive number please: '))
 
@@ -62,7 +62,7 @@ while i <= x:
     i += 1
 print(f'Factorial of number {x} is: ', result)
 
-print('\n6) Cevap:\n_________')
+print('\n6) Answer:\n_________')
 
 x = int(input('Write a number: '))
 
@@ -81,7 +81,7 @@ else:
             print('The number you wrote is not a prime number!')
             break
 
-print('\n7) Cevap:\n_________')
+print('\n7) Answer:\n_________')
 
 entry = 1
 limit = int(input("Enter the number that determines the upper limit in the Fibonacci sequence: "))
@@ -96,7 +96,7 @@ if limit != 0:
 else:
     print('The Fibonacci sequence consists of at least 3 elements, so the upper bound should have been at least 1!') # Fibonacci dizisi en az 3 elemandan olusur, bu nedenle ust sinir en dusuk 1 olmaliydi!
 
-print('\n8) Cevap:\n_________')
+print('\n8) Answer:\n_________')
 
 string1 = input('Write a string: ')
 string2 =''
@@ -104,7 +104,7 @@ for i in string1:
     string2 = i + string2
 print(f'Opposite of your word is: \'{string2}\'')
 
-print('\n9) Cevap:\n_________')
+print('\n9) Answer:\n_________')
 
 string1 = input('Write a string: ')
 j = -1
@@ -118,7 +118,7 @@ for i in range(len(string1) // 2):
         break
 print(result)
 
-print('\n10) Cevap:\n__________\n')
+print('\n10) Answer:\n__________\n')
 
 'Body Mass Index Calculation'
 height = int(input('Enter your height as centimeters (cm): '))
@@ -135,7 +135,7 @@ elif 30 <= bmi < 40:
 else:
     print('Over-weight')
 
-print('\n11) Cevap:\n__________\n')
+print('\n11) Answer:\n__________\n')
 numbers = []
 
 for i in range(3):
@@ -144,7 +144,7 @@ for i in range(3):
 
 print(f'The biggest number in this list is {max(numbers)}')
 
-print('\n12) Cevap:\n__________\n')
+print('\n12) Answer:\n__________\n')
 ogrenci = []
 course = {}
 courses = ['Math', 'Science', 'Culture', 'English']
