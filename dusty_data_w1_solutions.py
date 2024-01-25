@@ -117,4 +117,29 @@ else:
 
 # question 11
 
+n1 = int(input("Enter your first number: "))
+n2 = int(input("Enter your second number: "))
+n3 = int(input("Enter your third number: "))
+
+if n1 > n2 and n3:
+    print(n1)
+else:
+    if n2 > n3:
+        print(n2)
+    else:
+        print(n3)
+
+# question 12
+
+for i in range(4):
+
+    visa_grade = float(input(f"Enter {i + 1}. lesson visa grade(Ex.:71.5): "))
+    final_grade = float(input(f"Enter {i + 1}. lesson final grade(Ex.:66.4): "))
+    avg_end_grade = (visa_grade*0.4) + (final_grade*0.6)
+
+    if final_grade <= 50:
+        print(f"{i + 1}. ders BAŞARISIZ")
+    else:
+        print(f"{i + 1}. ders BAŞARILI")
+
 
