@@ -1,8 +1,8 @@
-S1:
+# S1:
 for i in range(1,11):
     print(i)
 
-S2/1:
+# S2/1:
 a=int(input("Bir sayı giriniz:"))
 
 
@@ -11,7 +11,7 @@ for i in range(1,a):
        print(i)
 
 
-S2/2:
+# S2/2:
 a=int(input("Bir sayı giriniz:"))
 i=0
 while a>i :
@@ -19,7 +19,7 @@ while a>i :
         print(i)
     i = i + 1
 
-S3:
+# S3:
 
 #Bir küçük bir de büyük sayı girmeniz gerekiyor
 
@@ -31,10 +31,10 @@ b=int(input("Bir büyük sayı giriniz:"))
 for i in range(a,b+1):
    print(i)
 
-S4:
+# S4:
 
 while True:
-   a = int(input("Bir sayı giriniz:"))
+   a = int(input("Bir sayı giriniz (Tek mı cıft mı soyleyım!:"))
    if a%2==0 :
        print("Girdiğiniz sayı çift sayıdır.")
    else:
