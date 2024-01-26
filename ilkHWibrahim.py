@@ -5,19 +5,11 @@ for i in range(1,11):
 
 #Soru2:
 #a)
-
-
 a=int(input("Bir sayı giriniz:"))
-
-
-
 
 for i in range(1,a):
    if i%2==0 :
        print(i)
-
-
-
 
 #b)
 a=int(input("Bir sayı giriniz:"))
@@ -34,20 +26,13 @@ while a>i :
 #Bir küçük bir de büyük sayı girmeniz gerekiyor
 
 
-
-
 a=int(input("Bir küçük sayı giriniz:"))
 b=int(input("Bir büyük sayı giriniz:"))
-
-
-
 
 for i in range(a,b+1):
    print(i)
 
-
 #Soru4:
-
 
 while True:
    a = int(input("Bir sayı giriniz:"))
@@ -56,21 +41,15 @@ while True:
    else:
        print("Girdiğiniz sayı tek sayıdır.")
 
-
 #Soru5:
 faktr = 1
 while True:
    sayı = int(input("faktöriyelini hesaplamak istediğiniz pozitif tamsayıyı giriniz: "))
 
 
-
-
    for i in range(1,sayı+1):
        faktr=faktr*i
    print(f"{sayı} sayısının faktöriyeli:", faktr)
-
-
-
 
 
 
@@ -88,10 +67,6 @@ if a>i:
            break
 if a==2:
    print("Girilen sayı asaldır")
-
-
-
-
 
 
 #Soru7:
@@ -113,16 +88,10 @@ txt = a[::-1]
 print(txt)
 
 
-
-
-
-
 #Soru9:
 #girilen kelimeyi palindrommu kontrol etme
 kelime=input("bir kelime yazın:")
 tersi = kelime[::-1]
-
-
 
 
 if kelime==tersi:
@@ -132,17 +101,12 @@ else:
 
 
 
-
 #Soru10:
 #Vücut kitle endeksi
 
 
-
-
 boy = float(input("Boy (m):"))
 kilo = float(input("Ağırlık (kg):"))
-
-
 
 
 endeks = kilo / (boy**2)
