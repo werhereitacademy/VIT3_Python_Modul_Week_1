@@ -95,7 +95,16 @@ if a==2:
 
 
 #Soru7:
-
+#100 sayısına kadarki Fibonacci sayılarını sıralayan kod
+c=0
+b=1
+for a in range(2,100):
+    a = b + c
+    b = c
+    c = a
+    if a>100:
+        break
+    print(a, end=",")
 
 #Soru8:
 #girilen kelimeyi ters yazma
