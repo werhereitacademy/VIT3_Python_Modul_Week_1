@@ -147,7 +147,10 @@ print('*'*38)
 print("Lessen\tMidterm\tFinaal\tAverage\tResult")    
 for i in range(4):
     print(f"{list_lessen[i]}\t{list_midterm[i]}\t{list_final[i]}\t{list_average[i]}\t{list_result[i]}")
-print('*'*38)    
+print('*'*38)  
+
+#***********************************#
+#Soru 12  
         
 
 
