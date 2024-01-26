@@ -44,6 +44,7 @@ if first_number > last_number:
   i = -1 #decreasing order
 else:
   i = 1 #ascending order
+
 print(f"All numbers between {first_number} to {last_number}")
 x = first_number
 while x != last_number + i:
