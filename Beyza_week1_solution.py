@@ -1,171 +1,198 @@
-#soru 1
-#1`den 10`a kadar olan sayilari ekrana yazdiriniz.
+#Question 1:
+#Write a Python code to print numbers from 1 to 10.
 
 for i in range(1,11):
   print(i)
 
 
-#soru 2
-#kullanicidan bir girisi alin ve bu sayiya kadar olan cift sayilari ekrana yazdiran bir Python prgrami yazin.
-#Once `for` sonra ` while` dongusu ile yapin.
 
-sayi = int(input("Bir sayı girin: "))
+#Question 2
+#Write a Python program that takes user input and prints all even numbers up to that input. Implement the program using both a for loop and a while loop.
 
-print(f"{sayi}'e kadar olan çift sayılar :")
-for i in range(0, sayi+1, 2):
+#Code (using for loop):
+number = int(input("Enter a number: "))
+
+print(f"Even numbers up to {number}:")
+for i in range(0, number+1, 2):
     print(i)
 
+#Code (using while loop):
+number = int(input("Enter a number: "))
 
-sayi = int(input("Bir sayı girin: "))
-
-print(f"{sayi}'e kadar olan çift sayılar :")
+print(f"Even numbers up to {number}:")
 i = 0
-while i <= sayi:
+while i <= number:
     print(i)
     i += 2
 
-#soru3
-#Kullanicidan bir baslangic ve bir bitis degeri alan bu degerler arasinda olan tum sayilari ekrana basan bir Python kodu yazin.(Bitis dahil.)
-baslangic = int(input("Başlangıç değerini girin: "))
-bitis = int(input("Bitiş değerini girin: "))
-print(f"{baslangic} ile {bitis} arasındaki tüm sayılar :")
+#Question 3
+#Write a Python code that takes a starting and ending value from the user and prints all the numbers in between (inclusive).
+start_value = int(input("Enter the starting value: "))
+end_value = int(input("Enter the ending value: "))
+print(f"All numbers between {start_value} and {end_value} (inclusive):")
 
-while baslangic <= bitis:
-    print(baslangic)
-    baslangic += 1
+while start_value <= end_value:
+    print(start_value)
+    start_value += 1
 
-#soru4
-#Kullanicadan bir sayi alin ve bu sayinin cift mi tek mi oldugunu ekrana yazdiran bir program yaziniz.
 
-s = int(input("Sayinizi girin:"))
-while s >= 0:
-   if s % 2 == 0:
-       print("Girilen sayi cifttir")
+#Question 4
+#Write a Python program that takes a number from the user and prints whether it is even or odd.
+
+number = int(input("Enter your number:"))
+while number >= 0:
+   if number % 2 == 0:
+       print("The entered number is even.")
        break
    else:
-       print("Girilen sayi tektir")
+       print("The entered number is odd.")
        break
 
-#soru 5
-#Kullanicidan pozitif bir tam sayi girisi alin ve faktoriyeline alan bir Python programi alin.
-
-pozitif_sayi = int(input("Pozitif bir sayi girin:"))
-faktoriyel = 1
-for i in range(1, pozitif_sayi+1):
-   faktoriyel *= i
-print(faktoriyel)
 
 
-#soru 6
-#Kullanicadan bir sayi alin ve bu sayinin asal olup olmadigini kontrol eden bir Pythin kodu yazin.
+#Question 5
+#Write a Python program that takes a positive integer input from the user and calculates its factorial.
+
+positive_number = int(input("Enter a positive number:"))
+factorial = 1
+for i in range(1, positive_number + 1):
+   factorial *= i
+print(factorial)
+
+
+#Question 6
+#Write a Python code that takes a number from the user and checks whether it is a prime number.
 while True:
-    sayi = int(input("Bir sayi giriniz:"))
-    if sayi < 2:
-        print(sayi, "Asal degildir.")
+    number = int(input("Enter a number:"))
+
+    if number < 2:
+        print(number, "is not a prime number.")
 
     else:
-        asal = True
+        is_prime = True
 
-        for i in range(2, sayi):
-            if sayi % i == 0:
-                print(sayi, "Asal degildir.")
-                asal = False
+        for i in range(2, number):
+            if number % i == 0:
+                print(number, "is not a prime number.")
+                is_prime = False
                 break
 
-        if asal == True:
-            print(sayi, "Asaldir.")
-
-#Soru 7
-#Fibonacci dizisini hesaplayan ve sonucu belirli bir sınıra kadar olan sayıları içeren bir liste olarak döndüren bir döngü nasıl oluşturulur?
-#Orn [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
-
-sinir = int(input("Fibonacci dizisini hangi sınıra kadar hesaplamak istiyorsunuz? "))
-
-fibonacci_dizisi = [0, 1]
-
-while fibonacci_dizisi[-1] + fibonacci_dizisi[-2] <= sinir:
-    yeni_terim = fibonacci_dizisi[-1] + fibonacci_dizisi[-2]
-    fibonacci_dizisi.append(yeni_terim)
-
-print(f"{sinir}'e kadar Fibonacci dizisi : {fibonacci_dizisi}")
+        if is_prime == True:
+            print(number, "is a prime number.")
 
 
-#Soru 8
-#Kullanıcıdan bir kelime alan ve bu kelimenin tersini ekrana yazdıran bir Python kodu yazınız.
+#Question 7
+#How can you create a loop that calculates the Fibonacci series and returns the result as a list containing numbers up to a certain limit?
+#For example: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]
+
+limit = int(input("Up to which limit do you want to calculate the Fibonacci series? "))
+
+fibonacci_series = [0, 1]
+
+while fibonacci_series[-1] + fibonacci_series[-2] <= limit:
+    new_term = fibonacci_series[-1] + fibonacci_series[-2]
+    fibonacci_series.append(new_term)
+
+print(f"Fibonacci series up to {limit}: {fibonacci_series}")
+
+
+
+
+#Question 8
+#Write a Python code that takes a word from the user and prints its reverse.
 while True:
-    kelime = input("Bir kelime giriniz:")
-    ters_kelime = kelime[: : -1]
-    harf_sayisi = len(kelime)
-    print("kelimenin tersi:",ters_kelime)
-    print("kelimenin harf sayisi:",harf_sayisi)
+    word = input("Enter a word:")
+    reversed_word = word[::-1]
+    letter_count = len(word)
+    print("Reversed word:", reversed_word)
+    print("Number of letters in the word:", letter_count)
 
 
-#Soru9
-#Kullanıcıdan bir kelime girişi alan ve bu kelimenin palindrom (tersten okunduğunda aynı olan)
-#olup olmadığını kontrol eden bir döngü ve koşullu ifade kombinasyonu nasıl oluşturulur?
+
+
+#Question 9
+#How can you create a loop and conditional statement combination to take a word input from the user and check whether it is a palindrome
+#(reads the same backward as forward)?
 
 while True:
-    kelime = input("Bir kelime giriniz:")
-    ters_kelime = kelime[: : -1]
+    word = input("Enter a word:")
+    reversed_word = word[::-1]
 
-    if kelime == ters_kelime:
-        print("Kelime palindromdur.")
+    if word == reversed_word:
+        print("The word is a palindrome.")
     else:
-        print("Kelime palindrom degildir.")
+        print("The word is not a palindrome.")
 
 
 
+#Question 10
+#Write a code that calculates the body mass index (BMI) of a person and returns whether they are underweight, normal, overweight,
+#or obese based on the BMI value. You can use the formula BMI = weight / (height in meters)^2. Ask the user for their weight and height in centimeters.
 
-#Soru 10
-#Kişinin kilo indeksini hesaplayıp indeks değerine göre zayıf, kilolu veya fazla kilolu olarak sonuç döndüren kodu yazınız.
-#(kilo indeks hesabı için internete bakabilirsiniz agirlik / boy(metre)karesi) Bunun için kullanıcıdan kilo ve boy ölçülerini isteyiniz.
-#Kilo indeksi 25’in altında ise zayıf, 25-30 arasında ise normal, 30-40dan büyük ise kilolu, 40tan büyük ise aşırı kilolu sonuçlarına varsın.
+#If the BMI is below 25, it's considered underweight. If it's between 25 and 30, it's normal. If it's between 30 and 40,
+#it's overweight. If it's above 40, it's considered obese.
 
-kilo = int(input("Lutfen kilonuzu giriniz:"))
-boy= float(input("Lutfen cm cinsinden boyunuzu giriniz:"))
+weight = int(input("Please enter your weight in kilograms:"))
+height = float(input("Please enter your height in centimeters:"))
 
-boy= boy/100
-kitle_endeksi = kilo /( boy * boy)
-print(kitle_endeksi)
-if kitle_endeksi < 25:
-    print("Sonucunuz'Zayif'")
-elif kitle_endeksi >=25 and kitle_endeksi <30:
-    print("Sonucunuz'Normal'")
-elif kitle_endeksi >=30 and kitle_endeksi <=40:
-    print("Sonucunuz'Kilolu")
+height = height / 100
+bmi = weight / (height * height)
+print("Your BMI:", bmi)
+
+if bmi < 25:
+    print("Your result: 'Underweight'")
+elif 25 <= bmi < 30:
+    print("Your result: 'Normal'")
+elif 30 <= bmi <= 40:
+    print("Your result: 'Overweight'")
 else:
-    print("Sonucunuz'Asiri Kilolu'")
+    print("Your result: 'Obese'")
 
 
-#Soru 11
-#Bir kullanıcının girdiği üç sayının en büyüğünü bulan bir Python programı nasıl yazılır?
-ilk_sayi = int(input("Lutfen ilk sayiyi giriniz:"))
-ikinci_sayi = int(input("Lutfen ikinci sayiyi giriniz:"))
-ucuncu_sayi = int(input("Lutfen ucuncu sayiyi giriniz:"))
 
-liste = [ilk_sayi,ikinci_sayi,ucuncu_sayi]
-liste.sort()
-print("Girmis oldugunuz en yuksek sayi:",liste[-1])
+#Question 11
+#How can a Python program be written to find the largest of three numbers entered by a user?
+first_number = int(input("Please enter the first number:"))
+second_number = int(input("Please enter the second number:"))
+third_number = int(input("Please enter the third number:"))
 
-#Soru 12
-# Bir ogrenciden herhangi bir ders icin Vize ve Final notlarıni alin. Ara sınav notunun %40'ı ile final notunun %60'ının toplamı yıl sonu ortalamasını verecektir.
-#Ortalama 50'nin altında ise ekranda “BAŞARISIZ”,
-#50 ve üzerinde ise “BAŞARILI” çıktısı ekrana gelecektir. Bu baskı işlemi 4 derstir. yapılacak ve dersler birbiri ardına yazılacaktır.
+number_list = [first_number, second_number, third_number]
+number_list.sort()
+print("The highest number you entered:", number_list[-1])
 
-liste = []
 
-def nothesapla(vize, final):
-   ortalama = (vize * 0.4) + (final * 0.6)
-   print(ortalama)
-   if ortalama >= 50:
-       return "BASARILI"
-   elif ortalama < 50:
-       return "BASARISIZ"
-while len(liste) <= 6:
-   ders_adi = input("Dersin Adi:")
-   vize_not = float(input("Vize Notu:"))
-   final_not = float(input("Final Notu:"))
-   liste.append(ders_adi)
-   liste.append(nothesapla(vize_not, final_not))
+#Question 12
+#Design a Python program to receive midterm and final grades from a student for any course. The final average will be calculated as 40% of the midterm grade
+#and 60% of the final grade. If the average is below 50, it will display "FAIL", otherwise "PASS".
+#This printing process will be repeated for 4 courses, and the courses will be written successively.
 
-print(liste)
+grades_list = []
+
+def calculate_grade(midterm, final):
+    average = (midterm * 0.4) + (final * 0.6)
+    print(average)
+    if average >= 50:
+        return "PASS"
+    elif average < 50:
+        return "FAIL"
+
+while len(grades_list) < 8:
+    course_name = input("Course Name:")
+    midterm_grade = float(input("Midterm Grade:"))
+    final_grade = float(input("Final Grade:"))
+    grades_list.append(course_name)
+    grades_list.append(calculate_grade(midterm_grade, final_grade))
+
+print(grades_list)
+
+
+
+
+
+
+
+
+
+
+
+
